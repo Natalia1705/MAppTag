@@ -1,0 +1,75 @@
+.register {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("https://as2.ftcdn.net/v2/jpg/02/76/12/59/1000_F_276125901_bmbL0gqxYfG5j2QY8mnqXKgiWdfuFoYh.jpg");
+    background-size: cover;
+  }
+  
+  .registerTitle {
+    font-size: 50px;
+  }
+  
+  .registerForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .registerForm > label {
+    margin: 10px 0;
+  }
+  
+  .registerInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .registerInput:focus {
+    outline: none;
+  }
+  
+  .registerButton {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .registerLoginButton {
+    margin-top: 10px;
+    background-color: lightcoral;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .success{
+    margin-top: 12px;
+    color: green;
+    font-size: 12;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .failure{
+    margin-top: 12px;
+    color: red;
+    font-size: 12;
+    font-weight: 600;
+    text-align: center;
+  }

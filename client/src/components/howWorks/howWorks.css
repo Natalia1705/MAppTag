@@ -1,0 +1,57 @@
+.howworks {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url("https://as2.ftcdn.net/v2/jpg/03/79/38/83/1000_F_379388341_Xc8LPilCFRreXsryGRiBOLSaTWDprrcE.jpg");
+    background-size: cover;
+  }
+
+  .howworksTitle {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+  }
+  
+  .content{
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      );
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1000px;
+    height: 1000px;
+   
+  }
+
+.img img{
+    margin-left: 50px;
+    height: 300px;
+  
+}
+.text{
+    justify-content: left;
+}
+
+.textTitle{
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-top: 10px;
+    font-family: "Capriola", sans-serif;
+}
