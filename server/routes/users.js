@@ -33,7 +33,7 @@ router.delete("/:id", async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user.username === req.body.username) {
       try {
-        await Pin.deleteMany({ _id: user._id });
+        await Pin.deleteMany({ username: user.usename });
         await user.delete();
         res.status(200).json("usuario eliminado...");
       } catch (err) {

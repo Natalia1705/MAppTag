@@ -5,8 +5,10 @@ const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const pinRoute = require("./routes/pins");
+const cors = require("cors");
 
 dotenv.config();
+app.use(cors());
 app.use(express.json());
 
 mongoose

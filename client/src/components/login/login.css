@@ -1,7 +1,5 @@
 .login {
     height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(
@@ -10,6 +8,9 @@
       ),
       url("https://as1.ftcdn.net/v2/jpg/02/38/19/42/1000_F_238194225_xqhHb7yi8lTPA830SMMSq0nPIhhdN8qB.jpg");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+ 
   }
 
   
@@ -17,17 +18,27 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+  
   }
   
   .loginForm > label {
     margin: 10px 0;
+    font-size: 15px;
   }
   
+  .loginTitle{
+    margin-top: 0;
+    font-size: 50px;
+    text-align: center;  
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
   .loginInput {
     padding: 10px;
     background-color: white;
     border: none;
     border-radius: 10px;
+
   }
   
   .loginInput:focus {
@@ -47,7 +58,7 @@
 
   .loginButton:disabled{
     cursor: not-allowed;
-    background-color: coral;
+    background-color: rgb(243, 181, 158);
   } 
   
   .loginRegisterButton {
@@ -60,4 +71,17 @@
     border: none;
     color: white;
     border-radius: 10px;
+  }
+
+  .contentForm{
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    );
+display: flex;
+align-items: center;
+justify-content: center;
+width: 400px;
+height: 500px;
+border-radius: 5px;
   }

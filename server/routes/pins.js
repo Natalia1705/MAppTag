@@ -4,11 +4,10 @@ const upload = require("../utils/multer");
 const Pin = require("../models/Pin");
 
 // CREATE A PIN
-// router.post("/", upload.single("image"), async (req, res) => {
-
-router.post("/", async (req, res) => {
+router.post("/", upload.single("file"), async (req, res) => {
   try {
-    // const result = await cloudinary.uploader.upload(req.file.path);
+    console.log(req.body);
+    const result = await cloudinary.uploader.upload(req.file.path);
     const newPin = new Pin({
       username: req.body.username,
       title: req.body.title,
@@ -16,9 +15,10 @@ router.post("/", async (req, res) => {
       rating: req.body.rating,
       lat: req.body.lat,
       long: req.body.long,
-      // img: result.secure_url,
-      // cloudinary_id: result.public_id,
+      img: result.secure_url,
+      cloudinary_id: result.public_id,
     });
+
     const savedPin = await newPin.save();
     res.status(200).json(savedPin);
   } catch (error) {

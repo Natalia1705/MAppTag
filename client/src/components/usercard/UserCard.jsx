@@ -33,11 +33,13 @@ export default function Settings() {
 
   const handleDelete = async (e) => {
     e.preventDefault();
-    dispatch({ type: "LOGOUT" });
+
     try {
       await axios.delete(`/users/${user._id}`, {
         data: { username: user.username },
       });
+      console.log("delete");
+      await dispatch({ type: "LOGOUT" });
       window.location.replace("/");
     } catch (err) {
       dispatch({ type: "DELETE_FAILURE" });
@@ -62,13 +64,13 @@ export default function Settings() {
           <label>Nombre</label>
           <input
             type="text"
-            placeholder={user.username}
+            placeholder={user ? user.username : null}
             onChange={(e) => setUsername(e.target.value)}
           />
           <label>Email</label>
           <input
             type="email"
-            placeholder={user.email}
+            placeholder={user ? user.email : null}
             onChange={(e) => setEmail(e.target.value)}
           />
           <label>Password</label>

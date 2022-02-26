@@ -24,10 +24,3 @@ export const UpdateSuccess = (user) => ({
 export const UpdateFailure = () => ({
   type: "UPDATE_FAILURE",
 });
-
-export const DeleteSucess = () => ({
-  type: "DELETE_SUCCESS",
-});
-export const DeleteFailure = () => ({
-  type: "DELETE_FAILURE",
-});

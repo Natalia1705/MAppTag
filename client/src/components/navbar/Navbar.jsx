@@ -19,7 +19,9 @@ export default function Topbar() {
             className="topIconImg"
           />
         </i>
-        <i className="topIconLetter">MAppTag</i>
+        <Link className="link" to="/">
+          <i className="topIconLetter">MAppTag</i>
+        </Link>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -28,11 +30,13 @@ export default function Topbar() {
               MAP
             </Link>
           </li>
-          <Link className="link" to="/about">
-            <li className="topListItem">COMO FUNCIONA</li>
-          </Link>
+          <li className="topListItem">
+            <Link className="link" to="/about">
+              COMO FUNCIONA
+            </Link>
+          </li>
           {user && (
-            <li className="topListItem" onClick={handleLogout}>
+            <li className="topListItem link" onClick={handleLogout}>
               SALIR
             </li>
           )}
@@ -48,17 +52,31 @@ export default function Topbar() {
             </li>
             <li className="topListItem">
               <Link className="link" to="/register">
-                REGISTER
+                REGISTRO
               </Link>
             </li>
           </ul>
         )}
         {user && (
-          <Link to={"/users"}>
-            <i className="topImg">
-              <AccountCircleIcon />
-            </i>
-          </Link>
+          <ul className="topList">
+            <li
+              className="topListItem link"
+              style={{ marginTop: "14px", fontSize: "22px" }}
+            >
+              {`Hola! ${user.username}`}
+            </li>
+            <Link to={"/users"}>
+              <AccountCircleIcon
+                className="topIcon"
+                style={{
+                  color: "#fff",
+                  height: "35px",
+                  width: "35px",
+                  marginTop: "7px",
+                }}
+              />
+            </Link>
+          </ul>
         )}
       </div>
     </div>

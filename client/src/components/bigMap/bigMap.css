@@ -1,6 +1,6 @@
 .card {
     width: 280px;
-    height: 250px;
+    height: 405px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,9 +8,9 @@
   
   label {
     width: max-content;
-    color: purple;
+    color: lightcoral;
     font-size: 13px;
-    border-bottom: 0.5px solid purple;
+    border-bottom: 0.5px;
     margin: 3px 0;
   }
   
@@ -30,8 +30,8 @@
     font-size: 12px;
   }
   form {
-    width: 250px;
-    height: 285px;
+    width: 260px;
+    height: 365px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -63,7 +63,92 @@ textarea {
   padding: 5px;
   border-radius: 5px;
   color: white;
-  background-color: purple;
+  background-color: lightcoral;;
   cursor: pointer;
 }
   
+.imagen{
+  display: flex;
+justify-content: center;
+}
+
+.rating-select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  display:flex;
+text-align: center;
+	width: 100%;
+	cursor: pointer;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+
+}
+
+
+.content-select{
+display: flex;
+}
+
+
+ 
+.content-select:hover i{
+	margin-top: 3px;
+}
+
+
+.imgButton{
+  appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  display:flex;
+
+}
+
+.fileinput{
+  margin-left: 50px;
+}
+
+
+.file-select{
+  margin-left: 50px;
+}
+.preview{
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 5px;
+}
+
+
+.custom-file-upload {
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.file-select {
+  position: relative;
+  display: inline-block;
+}
+
+
+input[type="file"] {
+  color: transparent;
+  
+}

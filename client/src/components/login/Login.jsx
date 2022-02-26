@@ -1,5 +1,4 @@
 import "./login.css";
-import { Link } from "react-router-dom";
 import { useContext, useRef } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
@@ -25,29 +24,31 @@ export default function Login() {
 
   return (
     <div className="login">
-      <span className="loginTitle">Login</span>
-      <form className="loginForm" onSubmit={handleSubmit}>
-        <label>Nombre</label>
-        <input
-          className="loginInput"
-          type="text"
-          placeholder="Enter your nombre..."
-          ref={nameRef}
-        />
-        <label>Password</label>
-        <input
-          className="loginInput"
-          type="password"
-          placeholder="Enter your password..."
-          ref={passwordRef}
-        />
-        <button className="loginButton" type="submit" disabled={isFetching}>
-          Login
-        </button>
-      </form>
-      <Link to="/register">
-        <button className="loginRegisterButton">Register</button>
-      </Link>
+      <div className="contentForm">
+        <form className="loginForm" onSubmit={handleSubmit}>
+          <div className="loginTitle">LOGIN</div>
+          <label>Nombre</label>
+          <input
+            className="loginInput"
+            type="text"
+            placeholder="Ingresa tu nombre..."
+            ref={nameRef}
+          />
+          <label>Contraseña</label>
+          <input
+            className="loginInput"
+            type="password"
+            placeholder="Ingresa tu contraseña..."
+            ref={passwordRef}
+          />
+          <button className="loginButton" type="submit" disabled={isFetching}>
+            Login
+          </button>
+        </form>
+        {/* <Link to="/register">
+          <button className="loginRegisterButton">Register</button>
+        </Link> */}
+      </div>
     </div>
   );
 }

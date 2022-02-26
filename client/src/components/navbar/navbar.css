@@ -5,21 +5,42 @@
     top: 0;
     display: flex;
     align-items: center;
-    background-color: #fff;
+    justify-content: center;
+    color: #fff;
     font-family: "Capriola", sans-serif;
     z-index: 999;
+    background-color: rgb(23, 119, 119);
+    font-family: 'Amatic SC', cursive;
+
   }
-  
+   
   .topCenter {
     flex: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
   }
   
-  .topLeft,
+  .topLeft{
+
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  
+    
+  }
   .topRight {
     flex: 3;
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
+    color: #fff;
+   
   }
   
   .topIcon {
@@ -27,32 +48,50 @@
     margin-right: 10px;
     color: #444;
     cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
   }
+
+  .link { 
+    color: #fff;   
+    font-family: 'Pangolin', cursive;
+    text-decoration:none;
+    display: flex;
+    align-items: center;
+}
+  /* .link:hover { color: rgb(247, 187, 165) } */
   
   .topImg {
      font-size: 40px;    
-  
     cursor: pointer;
   }
   
   .topList {
     display: flex;
     justify-content: center;
+
     margin: 0;
     padding: 0;
     list-style: none;
+    color: #fff;
+
   }
   
   .topListItem {
     margin-right: 20px;
     font-size: 18px;
-    font-weight: 300;
     cursor: pointer;
+
+
   }
   .topIconLetter{
     font-weight: 600;
-    color:purple;
-  }
+    color: #fff;
+    font-size: 30px;
+    text-decoration:none;
+    font-family: 'Nanum Pen Script', cursive;
+    align-items: center;
+     }
   
   .topIconImg{
     height: 40px;
@@ -60,7 +99,14 @@
   }
   .topIcon{
     height: 40px;
+  width: 40px;
    
+  }
+
+  .topIconImg{
+  border-radius: 50%;
+
+  
   }
  
   

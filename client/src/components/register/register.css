@@ -8,22 +8,31 @@
         rgba(255, 255, 255, 0.5),
         rgba(255, 255, 255, 0.5)
       ),
-      url("https://as2.ftcdn.net/v2/jpg/02/76/12/59/1000_F_276125901_bmbL0gqxYfG5j2QY8mnqXKgiWdfuFoYh.jpg");
+      url("https://image.shutterstock.com/image-vector/seamless-pattern-people-buying-selling-600w-1254258403.jpg");
     background-size: cover;
   }
   
   .registerTitle {
+    margin-top: 0;
     font-size: 50px;
-  }
+    text-align: center;  
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;}
   
   .registerForm {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(
+      rgba(235, 232, 232, 0.2),
+      rgba(235, 232, 232, 0.2)
+    ),
   }
   
   .registerForm > label {
     margin: 10px 0;
+    font-size: 15px;
+    color: teal;
   }
   
   .registerInput {
@@ -31,6 +40,7 @@
     background-color: white;
     border: none;
     border-radius: 10px;
+ 
   }
   
   .registerInput:focus {
@@ -48,15 +58,7 @@
     text-align: center;
   }
   
-  .registerLoginButton {
-    margin-top: 10px;
-    background-color: lightcoral;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    color: white;
-    border-radius: 10px;
-  }
+
 
   .success{
     margin-top: 12px;
