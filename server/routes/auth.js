@@ -20,6 +20,7 @@ router.post("/register", async (req, res) => {
     const template = getTemplate(username);
     const email = newUser.email;
     await sendEmail(email, template);
+
     //save new user
     const user = await newUser.save();
     res.status(200).json(user._id);
@@ -31,19 +32,16 @@ router.post("/register", async (req, res) => {
 // LOGIN
 router.post("/login", async (req, res) => {
   try {
-    //encontrar al usuario
     const user = await User.findOne({ username: req.body.username });
-    !user && res.status(400).json("Contraseña o usuario incorrecto");
+    !user && res.status(400).json("Contraseñao usuario incorrecto");
 
-    //validar password
     const validPassword = await bcrypt.compare(
       req.body.password,
       user.password
     );
-    !validPassword && res.status(400).json("Contraseña o usuario incorrecto");
+    !validPassword && res.status(400).json("Contraseñao usuario incorrecto");
 
-    //respuesta
-    res.status(200).json(user);
+    res.status(200).json({ _id: user._id, username: user.username });
   } catch (err) {
     res.status(500).json(err);
   }
